@@ -19,4 +19,11 @@ RUN ng build
 FROM base as final
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
-CMD [ "node", "app.js" ]
+CMD [ "node", "app.js"]
+
+
+
+
+
+
+
