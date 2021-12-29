@@ -61,8 +61,7 @@ jobs:
         cluster-name: '${{ env.clusterName }}'
     - name: Create ingress-demo namespace
       run: |
-        kubectl create namespace ingress-demo --dry-run=client -o json | kubectl
-        apply -f -
+        kubectl create namespace ingress-demo --dry-run=client -o json | kubectl apply -f -
 
     - name: Create ACR credentials secret
       uses: azure/k8s-create-secret@v1
